@@ -1,0 +1,40 @@
+---
+name: terraform-aws-s3-website
+github_user: marcelocorreia
+git_repo: marcelocorreia
+#logo: https://raw.githubusercontent.com/marcelocorreia/go-template-engine/master/resources/gte-logo.png
+docs: https://badwolf.correia.io/docs
+github: https://github.com/marcelocorreia
+linkedin: https://www.linkedin.com/in/marcelocorreia/
+website: https://badwolf.correia.io
+slack: https://correia-group.slack.com/
+email: badwolf@correia.io
+overview: Terraform module for S3 website
+blueprint_type: terraform/module
+
+extra_content: |
+  ### Features
+  - IP Restriction
+  - Route53 Record
+  - Log Bucket
+
+description: |
+  Terraform Module for S3 website
+
+
+shields:
+  - https://img.shields.io/github/forks/{{ printf "{{ .github_user }}" }}/{{ .name }}.svg
+  - https://img.shields.io/github/release/{{ printf "{{ .github_user }}" }}/{{ .name }}.svg
+
+tldr:
+  - '[Overview](#overview)'
+  - '[Description](#description)'
+  - '[Usage](#usage)'
+  - '[Inputs](#inputs)'
+  - '[Outputs](#outputs)'
+  - '[License](#license)'
+
+usage_file: example/main.tf
+
+licenses:
+  - apache-license
