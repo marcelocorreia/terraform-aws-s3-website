@@ -23,8 +23,8 @@ description: |
 
 
 shields:
-  - https://img.shields.io/github/forks/{{ printf "{{ .github_user }}" }}/{{ .name }}.svg
-  - https://img.shields.io/github/release/{{ printf "{{ .github_user }}" }}/{{ .name }}.svg
+  - https://img.shields.io/github/forks/{{ .github_user }}/{{ .name }}.svg
+  - https://img.shields.io/github/release/{{ .github_user }}/{{ .name }}.svg
 
 tldr:
   - '[Overview](#overview)'

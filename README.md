@@ -1,17 +1,56 @@
-# terraform-aws-s3-website 
----
-![shield](https://img.shields.io/github/release/marcelocorreia/terraform-aws-s3-website.svg)
-![shield](https://img.shields.io/github/last-commit/marcelocorreia/terraform-aws-s3-website.svg)
-![shield](https://img.shields.io/github/repo-size/marcelocorreia/terraform-aws-s3-website.svg)
-![shield](	https://img.shields.io/github/issues/marcelocorreia/terraform-aws-s3-website.svg)
+<!-- Auto generated file, please refer to README.yml -->
+# terraform-aws-s3-website
 
----
 
-## TL;DR;
-- [Inputs](#inputs) & [Outputs](#outputs)
 
-- blah blah
-- blah blah bleh
+- [![shield](https://img.shields.io/github/forks/marcelocorreia/terraform-aws-s3-website.svg)](https://github.com/marcelocorreia/terraform-aws-s3-website)
+
+- [![shield](https://img.shields.io/github/release/marcelocorreia/terraform-aws-s3-website.svg)](https://github.com/marcelocorreia/terraform-aws-s3-website)
+
+
+### TLDR;
+- [Overview](#overview)
+- [Description](#description)
+- [Usage](#usage)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [License](#license)
+
+### Overview
+Terraform module for S3 website
+
+### Description
+Terraform Module for S3 website
+
+
+
+### Features
+- IP Restriction
+- Route53 Record
+- Log Bucket
+
+
+
+### Usage
+```hcl-terraformprovider "aws" {
+  region = "ap-southeast-2"
+}
+
+module "s3www" {
+  source              = "../"
+  hostname            = "rnd.badwolf.correia.ninja"
+  upload_sample_htmls = true
+  zone_name           = "correia.ninja"
+  allowed_ips_cidr = ["${var.allowed_ips_cidr}"]
+  logs_prefix = "rnd/"
+  dns_ttl = "60"
+}
+variable "allowed_ips_cidr" {
+  type = "list"
+}
+
+
+```
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -66,11 +105,14 @@
 | s3\_bucket\_website\_domain | The domain of the website endpoint |
 | s3\_bucket\_website\_endpoint | The website endpoint URL |
 
-## License 
+
+
+<!-- Apache License -->
+### License 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
-See [LICENSE](LICENSE) for full details.
+Copyright [2015] 
 
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -88,6 +130,22 @@ See [LICENSE](LICENSE) for full details.
     KIND, either express or implied.  See the License for the
     specific language governing permissions and limitations
     under the License.
+    
+<!-- -->
 
+
+
+
+[docs]: https://badwolf.correia.io/docs
+
+[github]: https://github.com/marcelocorreia
+
+[linkedin]: https://www.linkedin.com/in/marcelocorreia/
+
+[website]: https://badwolf.correia.io
+
+[slack]: https://correia-group.slack.com/
+
+[email]: badwolf@correia.io
 
 
