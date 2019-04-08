@@ -1,7 +1,7 @@
 ---
 name: terraform-aws-s3-website
 github_user: marcelocorreia
-git_repo: marcelocorreia
+git_repo: terraform-aws-s3-website
 #logo: https://raw.githubusercontent.com/marcelocorreia/go-template-engine/master/resources/gte-logo.png
 docs: https://badwolf.correia.io/docs
 github: https://github.com/marcelocorreia
@@ -10,7 +10,7 @@ website: https://badwolf.correia.io
 slack: https://correia-group.slack.com/
 email: badwolf@correia.io
 overview: Terraform module for S3 website
-blueprint_type: terraform/module
+blueprint: terraform/module
 
 extra_content: |
   ### Features

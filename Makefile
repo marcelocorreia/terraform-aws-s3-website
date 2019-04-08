@@ -1,4 +1,4 @@
-AWS_PROFILE := badwolf-labs
+AWS_PROFILE ?= one
 
 WEBSITE_NAME := rnd.badwolf.correia.ninja
 ALLOWED_IPS_CIDR := [\"$(shell curl -s http://checkip.amazonaws.com)/32\"]
@@ -6,6 +6,7 @@ WAIT_FOR_STACK := 120
 
 p:
 	@echo $(ALLOWED_IPS_CIDR)
+
 full: apply _sleep spec destroy
 
 init: _creds
