@@ -106,12 +106,3 @@ resource "aws_s3_bucket_object" "temp_htmls" {
   acl          = "${var.bucket_acl}"
 }
 
-
-resource "aws_route53_record" "dns" {
-  name    = "${local.dns_record_name}"
-  type    = "CNAME"
-  zone_id = "${data.aws_route53_zone.dns_zone_name.zone_id}"
-  records = ["${aws_s3_bucket.default.website_endpoint}"]
-  ttl     = "${var.dns_ttl}"
-}
-

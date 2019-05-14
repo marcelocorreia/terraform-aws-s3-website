@@ -21,7 +21,7 @@ locals {
   ]
 
   logs_prefix     = "${var.logs_prefix == "" ? var.hostname : var.logs_prefix}"
-  dns_record_name = "${replace(var.hostname, ".${var.zone_name}" ,"" )}"
+//  dns_record_name = "${replace(var.hostname, ".${var.zone_name}" ,"" )}"
 }
 
 //variable "name" {
@@ -202,9 +202,9 @@ variable "dns_ttl" {
   description = "Route 53 DNS TTL"
 }
 
-variable "zone_name" {
-  description = "Route 53 zone name. I.e.: correia.io"
-}
+//variable "zone_name" {
+//  description = "Route 53 zone name. I.e.: correia.io"
+//}
 
 variable "replication_source_principal_arns" {
   type        = "list"

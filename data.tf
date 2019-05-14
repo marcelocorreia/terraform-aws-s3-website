@@ -100,6 +100,3 @@ data "aws_iam_policy_document" "default" {
   ]
 }
 
-data "aws_route53_zone" "dns_zone_name" {
-  name = "${var.zone_name}"
-}

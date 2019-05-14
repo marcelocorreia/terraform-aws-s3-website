@@ -1,10 +1,3 @@
-output "dns" {
-  value = "${aws_route53_record.dns.fqdn}"
-  description = "FQDN"
-}
-
-
-
 output "hostname" {
   value       = "${var.hostname}"
   description = "Bucket hostname"
